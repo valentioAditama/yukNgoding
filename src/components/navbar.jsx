@@ -1,29 +1,4 @@
 import React from "react";
-import { initializeApp } from 'firebase/app';
-import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
-
-const firebaseApp = initializeApp({
-    apiKey: "AIzaSyDy6qkD2dlbeLUR4Fi-1me-V3Tgz06_W-0",
-    authDomain: "yukngoding-67950.firebaseapp.com",
-    projectId: "yukngoding-67950",
-    storageBucket: "yukngoding-67950.appspot.com",
-    messagingSenderId: "432726763680",
-    appId: "1:432726763680:web:20bf65db9257140c10c1c5",
-    measurementId: "G-TSS20DPDCF"
-});
-
-const auth = getAuth(firebaseApp);
-const db = getFirestore(firebaseApp);
-
-// detect auth state 
-onAuthStateChanged(auth, user => {
-    if (user != null) {
-        console.log("Logged in");
-    } else {
-        console.log("user not login");
-    }
-});
 
 function Navbar() {
     return (
